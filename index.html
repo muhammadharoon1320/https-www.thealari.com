@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>T  H  E     A  L  A  R  I</title>
 
-<!-- Aptos-like fallback font -->
+<!-- Base configuration -->
 <style>
 body {
   margin: 0;
@@ -22,34 +22,35 @@ body {
   text-align: center;
   margin-top: 0;
   margin-bottom: 25px;
+  white-space: nowrap; /* Keeps the custom spacing intact on one line */
 }
 
-/* 2. Tagline: Font: Ecatherina, Color: sparkling nightmare blue. Triple spacing below. */
+/* 2. Tagline: Font: featherly, Color: sparkling nightmare dark blue. Triple spacing below. */
 .tagline {
-  font-family: "Ecatherina";
+  font-family: "featherly";
   font-size: 26px;
   font-style: normal;
   text-align: center;
   
-  /* Sparkling Nightmare Blue Gradient */
-  background: linear-gradient(135deg, #0a1128 0%, #1c3d5a 25%, #4a90e2 50%, #1c3d5a 75%, #0a1128 100%);
+  /* Sparkling Nightmare Dark Blue Gradient (Deep Midnight & Navy Shades) */
+  background: linear-gradient(135deg, #020617 0%, #0f172a 25%, #1e3a8a 50%, #0f172a 75%, #020617 100%);
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: nightmareBlueSparkle 5s ease infinite;
+  animation: nightmareDarkBlueSparkle 5s ease infinite;
   
   /* 3. Triple increased line spacing before Coming Soon */
   margin-bottom: 90px; 
 }
 
-@keyframes nightmareBlueSparkle {
+@keyframes nightmareDarkBlueSparkle {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Sophistication Approaches Soon: Le Maire configuration + Golden Sparkle Effect */
+/* Sophistication Approaches Soon button style */
 .sparkle-button {
   font-family: "Le Maire", "Apple Chancery", "Georgia", cursive, serif;
   font-size: 18px;
@@ -58,8 +59,6 @@ body {
   border-radius: 8px;
   cursor: pointer;
   color: #fff;
-  
-  /* Metallic Golden Sparkle Gradient */
   background: linear-gradient(135deg, #b48a2c 0%, #fcd667 25%, #b48a2c 50%, #fcd667 75%, #b48a2c 100%);
   background-size: 400% 400%;
   box-shadow: 0 0 12px rgba(252, 214, 103, 0.4);
@@ -141,22 +140,22 @@ body {
 
 <div class="center fade">
 
-  <!-- 1. Brand name text spaced out in size 56 (Ashegia bold) -->
-  <div class="brand-title">T  H  E     A  L  A  R  I</div>
+  <!-- 1. Brand name text with forced double spaces and 5-space gap -->
+  <div class="brand-title">T&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;I</div>
 
-  <!-- 2. Tagline text (Ecatherina, Sparkling Nightmare Blue) -->
+  <!-- 2. Tagline text (featherly, Sparkling Nightmare Dark Blue) -->
   <p class="tagline">Elevate Your Ethnic Elegance Effortlessly</p>
 
-  <!-- 3. COMING SOON (Separated by triple spacing via the tagline's bottom margin) -->
-  <h1 class="gold" style="font-size: 20px; margin-top: 0; margin-bottom: 30px; letter-spacing: 2px;">COMING SOON</h1>
+  <!-- 3. COMING SON (Triple spaced below the tagline) -->
+  <h1 class="gold" style="font-size: 20px; margin-top: 0; margin-bottom: 30px; letter-spacing: 2px;">COMING SON</h1>
 
-  <!-- Sophistication Approaches Soon button -->
+  <!-- Sophistication Approaches Son button -->
   <button class="sparkle-button" onclick="document.getElementById('waPopup').style.display='block'">
-    Sophistication Approaches Soon
+    Sophistication Approaches Son
   </button>
 
   <!-- Contact line -->
-  <h2 class="gold" style="font-size: 18px; margin-top: 25px;">Contact: @gmail.com</h2>
+  <h2 class="gold" style="font-size: 18px; margin-top: 25px;">Contact: 313pinterest313@gmail.com</h2>
 
 </div>
 
