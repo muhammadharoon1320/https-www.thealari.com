@@ -4,13 +4,40 @@
 <meta charset="UTF-8">
 <title>T  H  E     A  L  A  R  I</title>
 
-<!-- Base configuration -->
 <style>
+/* Base configuration with your custom satin wallpaper background */
 body {
   margin: 0;
+  padding: 0;
   font-family: Aptos, Arial, sans-serif;
-  background: #ffffff;
   color: #111;
+  min-height: 100vh;
+  
+  /* Setting the wallpaper background image */
+  background-image: url('wallpaper.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* 80% transparency overlay that sits behind text but above the image */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.80); /* 80% opacity white transparency layer */
+  z-index: 1; /* Sits behind the text content */
+}
+
+/* Container to bring all website content and text safely to the front layer */
+.main-content {
+  position: relative;
+  z-index: 2; /* Forces text to display cleanly in front of the background */
 }
 
 /* 1. T H E  A L A R I: Font size 56px, Font: Ashegia bold. No other alteration. */
@@ -22,18 +49,18 @@ body {
   text-align: center;
   margin-top: 0;
   margin-bottom: 25px;
-  white-space: nowrap; /* Keeps the custom spacing intact on one line */
+  white-space: nowrap; 
 }
 
 /* 2. Tagline: Font: ballet, Bold, adequate spacing, Color: sparkling nightmare dark blue. Triple spacing below. */
 .tagline {
   font-family: "ballet";
   font-size: 26px;
-  font-weight: bold; /* Ensures font is bold */
-  letter-spacing: 1.5px; /* Provides adequate and appropriate inter-character spacing */
+  font-weight: bold; 
+  letter-spacing: 1.5px; 
   text-align: center;
   
-  /* Sparkling Nightmare Dark Blue Gradient (Deep Midnight & Navy Shades) */
+  /* Sparkling Nightmare Dark Blue Gradient */
   background: linear-gradient(135deg, #020617 0%, #0f172a 25%, #1e3a8a 50%, #0f172a 75%, #020617 100%);
   background-size: 400% 400%;
   -webkit-background-clip: text;
@@ -98,6 +125,7 @@ body {
 }
 
 .card {
+  background: rgba(255, 255, 255, 0.6); /* Semi-transparent to blend with wallpaper */
   border: 1px solid #eee;
   border-radius: 12px;
   padding: 20px;
@@ -105,6 +133,7 @@ body {
   display: inline-block;
   width: 220px;
   vertical-align: top;
+  backdrop-filter: blur(2px);
 }
 
 .icon {
@@ -139,46 +168,50 @@ body {
 
 <body>
 
-<div class="center fade">
+<div class="main-content">
 
-  <!-- 1. Brand name text with forced double spaces and 5-space gap -->
-  <div class="brand-title">T&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;I</div>
+  <div class="center fade">
 
-  <!-- 2. Tagline text (ballet, Bold, Sparkling Nightmare Dark Blue) -->
-  <p class="tagline">Elevate Your Ethnic Elegance Effortlessly</p>
+    <!-- 1. Brand name text with forced double spaces and 5-space gap -->
+    <div class="brand-title">T&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;I</div>
 
-  <!-- 3. COMING SOON (Triple spaced below the tagline) -->
-  <h1 class="gold" style="font-size: 20px; margin-top: 0; margin-bottom: 30px; letter-spacing: 2px;">COMING SOON</h1>
+    <!-- 2. Tagline text (ballet, Bold, Sparkling Nightmare Dark Blue) -->
+    <p class="tagline">Elevate Your Ethnic Elegance Effortlessly</p>
 
-  <!-- Sophistication Approaches Soon button -->
-  <button class="sparkle-button" onclick="document.getElementById('waPopup').style.display='block'">
-    Sophistication Approaches Soon
-  </button>
+    <!-- 3. COMING SOON (Triple spaced below the tagline) -->
+    <h1 class="gold" style="font-size: 20px; margin-top: 0; margin-bottom: 30px; letter-spacing: 2px;">COMING SOON</h1>
 
-  <!-- Contact line -->
-  <h2 class="gold" style="font-size: 18px; margin-top: 25px;">Contact: @gmail.com</h2>
+    <!-- Sophistication Approaches Soon button -->
+    <button class="sparkle-button" onclick="document.getElementById('waPopup').style.display='block'">
+      Sophistication Approaches Soon
+    </button>
 
-</div>
+    <!-- Contact line -->
+    <h2 class="gold" style="font-size: 18px; margin-top: 25px;">Contact: @gmail.com</h2>
 
-<!-- Feature Cards -->
-<div class="center fade">
-
-  <div class="card">
-    <div class="icon">💎</div>
-    <h3>Premium Asset</h3>
-    <p>High value digital domain with strong and rising branding potential.</p>
   </div>
 
-  <div class="card">
-    <div class="icon">🛡️</div>
-    <h3>Investment Grade</h3>
-    <p>Ideal for clothing brands businesses startups and investors from Middle East and South Asia.</p>
-  </div>
+  <!-- Feature Cards -->
+  <div class="center fade">
 
-  <div class="card">
-    <div class="icon">🔒</div>
-    <h3>Secure Transfer</h3>
-    <p>Safe and verified domain transfer process.</p>
+    <div class="card">
+      <div class="icon">💎</div>
+      <h3>Premium Asset</h3>
+      <p>High value digital domain with strong and rising branding potential.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛡️</div>
+      <h3>Investment Grade</h3>
+      <p>Ideal for clothing brands businesses startups and investors from Middle East and South Asia.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h3>Secure Transfer</h3>
+      <p>Safe and verified domain transfer process.</p>
+    </div>
+
   </div>
 
 </div>
