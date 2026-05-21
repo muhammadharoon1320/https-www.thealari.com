@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Premium Domain</title>
+<title>THE ALARI</title>
 
 <!-- Aptos-like fallback font -->
 <style>
@@ -11,6 +11,17 @@ body {
   font-family: Aptos, Arial, sans-serif;
   background: #ffffff;
   color: #111;
+}
+
+/* Custom styling for the main header title */
+.brand-title {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 22px;
+  font-weight: bold; /* Makes THE ALARI bold */
+  color: #b48a2c;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 /* fade-in animation */
@@ -91,16 +102,20 @@ button:hover {
 
 <div class="center fade">
 
-  <div class="badge">PREMIUM DOMAIN</div>
+  <!-- THE ALARI title (Bold, 22px, Century Gothic, Golden) -->
+  <div class="brand-title">THE ALARI</div>
 
-  <h1 class="gold">COMING SOON</h1>
+  <!-- Tagline (Standard, non-italicized text) -->
+  <p style="font-size: 18px; font-style: normal; margin-bottom: 15px;">Elevate Your Ethnic Elegance Effortlessly</p>
 
-  <p>This premium domain is available for acquisition by serious buyers only.</p>
+  <!-- Coming Soon line -->
+  <h1 class="gold" style="margin-top: 0;">COMING SOON</h1>
 
   <h2 class="gold">Contact: 313pinterest313@gmail.com</h2>
 
+  <!-- Button text -->
   <button onclick="document.getElementById('waPopup').style.display='block'">
-    Make Offer
+    Sophistication Approaches Soon
   </button>
 
 </div>
@@ -141,7 +156,7 @@ button:hover {
 function sendWA() {
   let num = document.getElementById("num").value;
   if (!num) return alert("Enter number");
-  window.open("https://wa.me/" + num, "_blank");
+  window.open("https://wa.me" + num, "_blank");
 }
 </script>
 
