@@ -13,6 +13,186 @@ body {
   color: #111;
 }
 
+/* 1. THE ALARI: 36px font size with Glomersa configuration */
+.brand-title {
+  font-family: "Glomersa", "Century Gothic", CenturyGothic, serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #b48a2c;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* 2. Sophistication Approaches Soon: Le Maire configuration + Golden Sparkle Effect */
+.sparkle-button {
+  font-family: "Le Maire", "Apple Chancery", "Georgia", cursive, serif;
+  font-size: 18px;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  
+  /* Metallic Golden Sparkle Gradient */
+  background: linear-gradient(135deg, #b48a2c 0%, #fcd667 25%, #b48a2c 50%, #fcd667 75%, #b48a2c 100%);
+  background-size: 400% 400%;
+  box-shadow: 0 0 12px rgba(252, 214, 103, 0.4);
+  
+  /* Sparkle shimmer animation */
+  animation: goldShimmer 4s ease infinite;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.sparkle-button:hover {
+  opacity: 0.95;
+  box-shadow: 0 0 20px rgba(252, 214, 103, 0.7);
+}
+
+/* fade-in animation */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.center {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* gold accents */
+.gold {
+  color: #b48a2c;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  width: 220px;
+  vertical-align: top;
+}
+
+.icon {
+  font-size: 28px;
+  color: #b48a2c;
+}
+
+/* WhatsApp popup styling */
+#waPopup {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+#waPopup button {
+  background: #b48a2c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="center fade">
+
+  <!-- THE ALARI (Size 36, Font family target: Glomersa) -->
+  <div class="brand-title">THE ALARI</div>
+
+  <!-- Tagline text -->
+  <p style="font-size: 18px; font-style: normal; margin-bottom: 20px;">Elevate Your Ethnic Elegance Effortlessly</p>
+
+  <!-- 3. COMING SON: Styled down to 20px font size -->
+  <h1 class="gold" style="font-size: 20px; margin-top: 0; margin-bottom: 30px; letter-spacing: 2px;">COMING SON</h1>
+
+  <!-- 4. Sophistication Approaches Son: Button configured with sparkling Le Maire style -->
+  <button class="sparkle-button" onclick="document.getElementById('waPopup').style.display='block'">
+    Sophistication Approaches Son
+  </button>
+
+  <!-- Contact email positioned safely under the primary action block button -->
+  <h2 class="gold" style="font-size: 18px; margin-top: 25px;">Contact: 313pinterest313@gmail.com</h2>
+
+</div>
+
+<!-- Feature Cards -->
+<div class="center fade">
+
+  <div class="card">
+    <div class="icon">💎</div>
+    <h3>Premium Asset</h3>
+    <p>High value digital domain with strong and rising branding potential.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">🛡️</div>
+    <h3>Investment Grade</h3>
+    <p>Ideal for clothing brands businesses startups and investors from Middle East and South Asia.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">🔒</div>
+    <h3>Secure Transfer</h3>
+    <p>Safe and verified domain transfer process.</p>
+  </div>
+
+</div>
+
+<!-- WhatsApp Popup -->
+<div id="waPopup">
+  <p><b>Send Offer via WhatsApp</b></p>
+  <input id="num" placeholder="Enter WhatsApp number">
+  <br><br>
+  <button onclick="sendWA()">Continue</button>
+  <button onclick="document.getElementById('waPopup').style.display='none'">Close</button>
+</div>
+
+<script>
+function sendWA() {
+  let num = document.getElementById("num").value;
+  if (!num) return alert("Enter number");
+  window.open("https://wa.me" + num, "_blank");
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>THE ALARI</title>
+
+<!-- Aptos-like fallback font -->
+<style>
+body {
+  margin: 0;
+  font-family: Aptos, Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
 /* Custom styling for the main header title */
 .brand-title {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
