@@ -159,6 +159,263 @@ body::before {
 
 <body>
 
+<!-- Hidden Audio Player using relative tracking for GitHub environments -->
+<audio id="bgMusic" loop autoplay preload="auto">
+  <source src="./music.mp3" type="audio/mpeg">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="main-content">
+
+  <div class="center fade">
+
+    <!-- Brand title -->
+    <div class="brand-title">T&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;I</div>
+
+    <!-- Tagline text -->
+    <p class="tagline">Elevate Your Ethnic Elegance Effortlessly</p>
+
+    <!-- COMING SOON - Typography corrected from SON to SOON -->
+    <h1 class="gold" style="font-size: 20px; margin-top: 0; margin-bottom: 30px; letter-spacing: 2px;">COMING SOON</h1>
+
+    <!-- Sophistication Approaches Soon button - Typography corrected from Son to Soon -->
+    <button class="sparkle-button" onclick="document.getElementById('waPopup').style.display='block'">
+      Sophistication Approaches Soon
+    </button>
+
+    <!-- Contact line -->
+    <h2 class="gold" style="font-size: 18px; margin-top: 25px;">Contact: 313pinterest313@gmail.com</h2>
+
+  </div>
+
+  <!-- Feature Cards -->
+  <div class="center fade">
+    <div class="card">
+      <div class="icon">💎</div>
+      <h3>Premium Asset</h3>
+      <p>High value digital domain with strong and rising branding potential.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🛡️</div>
+      <h3>Investment Grade</h3>
+      <p>Ideal for clothing brands businesses startups and investors from Middle East and South Asia.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h3>Secure Transfer</h3>
+      <p>Safe and verified domain transfer process.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- WhatsApp Popup -->
+<div id="waPopup">
+  <p><b>Send Offer via WhatsApp</b></p>
+  <input id="num" placeholder="Enter WhatsApp number">
+  <br><br>
+  <button onclick="sendWA()">Continue</button>
+  <button onclick="document.getElementById('waPopup').style.display='none'">Close</button>
+</div>
+
+<script>
+// Alternate, more powerful interaction engine to bypass aggressive browser blockers
+let audioContextInstance = null;
+
+function activateAutoplayMusic() {
+  let music = document.getElementById("bgMusic");
+  
+  // Create an explicit Audio Context connection if the browser dropped it
+  if (!audioContextInstance) {
+    audioContextInstance = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  
+  if (audioContextInstance.state === 'suspended') {
+    audioContextInstance.resume();
+  }
+
+  music.play().then(() => {
+    // Stop listening once the sound starts playing cleanly
+    document.removeEventListener('click', activateAutoplayMusic);
+    document.removeEventListener('touchstart', activateAutoplayMusic);
+  }).catch(error => {
+    console.log("Audio pipeline waiting for standard user engagement link: ", error);
+  });
+}
+
+// Bind to universal desktop click and mobile touch configurations
+document.addEventListener('click', activateAutoplayMusic);
+document.addEventListener('touchstart', activateAutoplayMusic);
+
+function sendWA() {
+  let num = document.getElementById("num").value;
+  if (!num) return alert("Enter number");
+  window.open("https://wa.me" + num, "_blank");
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>T  H  E     A  L  A  R  I</title>
+
+<!-- Base configuration -->
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Aptos, Arial, sans-serif;
+  color: #111;
+  min-height: 100vh;
+  background-image: url('wallpaper.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* 80% transparency overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.80);
+  z-index: 1;
+}
+
+/* Container for text layers */
+.main-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* 1. T H E  A L A R I */
+.brand-title {
+  font-family: "Ashegia";
+  font-size: 56px;
+  font-weight: bold;
+  color: #b48a2c;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  white-space: nowrap; 
+}
+
+/* 2. Tagline: Ballet font, Bold, Sparkling Nightmare Dark Blue */
+.tagline {
+  font-family: "ballet";
+  font-size: 26px;
+  font-weight: bold; 
+  letter-spacing: 1.5px; 
+  text-align: center;
+  background: linear-gradient(135deg, #020617 0%, #0f172a 25%, #1e3a8a 50%, #0f172a 75%, #020617 100%);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: nightmareDarkBlueSparkle 5s ease infinite;
+  margin-bottom: 90px; 
+}
+
+@keyframes nightmareDarkBlueSparkle {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sophistication Approaches Soon button style */
+.sparkle-button {
+  font-family: "Le Maire", "Apple Chancery", "Georgia", cursive, serif;
+  font-size: 18px;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #b48a2c 0%, #fcd667 25%, #b48a2c 50%, #fcd667 75%, #b48a2c 100%);
+  background-size: 400% 400%;
+  box-shadow: 0 0 12px rgba(252, 214, 103, 0.4);
+  animation: goldShimmer 4s ease infinite;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.sparkle-button:hover {
+  opacity: 0.95;
+  box-shadow: 0 0 20px rgba(252, 214, 103, 0.7);
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.center {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.gold {
+  color: #b48a2c;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  width: 220px;
+  vertical-align: top;
+  backdrop-filter: blur(2px);
+}
+
+.icon {
+  font-size: 28px;
+  color: #b48a2c;
+}
+
+#waPopup {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+#waPopup button {
+  background: #b48a2c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
 <!-- Hidden Audio Player configured to loop infinitely with strict MIME assignment -->
 <audio id="bgMusic" loop autoplay>
   <source src="music.mp3" type="audio/mpeg">
@@ -183,7 +440,7 @@ body::before {
     </button>
 
     <!-- Contact line -->
-    <h2 class="gold" style="font-size: 18px; margin-top: 25px;">Contact: 313pinterest313@gmail.com</h2>
+    <h2 class="gold" style="font-size: 18px; margin-top: 25px;">Contact: @gmail.com</h2>
 
   </div>
 
